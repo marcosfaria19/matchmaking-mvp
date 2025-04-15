@@ -39,10 +39,10 @@ export default function MatchmakingSystem() {
   return (
     <div className="relative">
       {/* Decorative elements */}
-      <div className="absolute -top-12 -left-12 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
-      <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+      <div className="absolute -top-8 -left-8 md:-top-12 md:-left-12 w-16 h-16 md:w-24 md:h-24 bg-accent/10 rounded-full blur-xl md:blur-2xl"></div>
+      <div className="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 w-20 h-20 md:w-32 md:h-32 bg-primary/10 rounded-full blur-xl md:blur-2xl"></div>
 
-      <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-border">
+      <div className="relative bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-lg md:shadow-xl overflow-hidden border border-border">
         <AnimatePresence mode="wait">
           {!matches ? (
             <motion.div

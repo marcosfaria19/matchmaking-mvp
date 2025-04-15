@@ -45,10 +45,10 @@ export default function MatchForm({ onSubmit, isLoading }: MatchFormProps) {
 
   return (
     <div className="p-8 md:p-10">
-      <h2 className="text-2xl font-bold font-heading mb-2 text-gray-800">
-        Conte um pouco sobre você
+      <h2 className="text-2xl font-bold font-heading mb-8 text-gray-800 ">
+        Conte sobre você!
       </h2>
-      <p className="text-gray-600 mb-8">
+      <p className="text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
         Preencha o formulário abaixo para encontrar a pessoa ideal para você
       </p>
 
@@ -89,7 +89,7 @@ export default function MatchForm({ onSubmit, isLoading }: MatchFormProps) {
                   <div className="relative">
                     <Lightbulb className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
                     <Input
-                      placeholder="ex: Tecnologia, Arte, Música, Esportes, Jogos"
+                      placeholder="ex: Tecnologia, Música, Jogos"
                       className="pl-10 border-border focus:border-primary rounded-xl"
                       {...field}
                     />
