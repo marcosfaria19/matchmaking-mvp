@@ -17,13 +17,15 @@ import { Loader2, Search, User, MapPin, Lightbulb } from "lucide-react";
 
 /// Form schema com Zod
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z
+    .string()
+    .min(2, { message: "O nome deve ter no mínimo 2 caracteres." }),
   interest: z
     .string()
-    .min(2, { message: "Interest must be at least 2 characters." }),
+    .min(2, { message: "Os interesses devem ter no mínimo 2 caracteres." }),
   location: z
     .string()
-    .min(2, { message: "Location must be at least 2 characters." }),
+    .min(2, { message: "A localização deve ter no mínimo 2 caracteres." }),
 });
 
 interface MatchFormProps {
@@ -65,7 +67,7 @@ export default function MatchForm({ onSubmit, isLoading }: MatchFormProps) {
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
                     <Input
                       placeholder="Seu nome"
-                      className="pl-10 border-purple-100 focus:border-primary rounded-xl"
+                      className="pl-10 border-border focus:border-primary rounded-xl"
                       {...field}
                     />
                   </div>
@@ -88,7 +90,7 @@ export default function MatchForm({ onSubmit, isLoading }: MatchFormProps) {
                     <Lightbulb className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
                     <Input
                       placeholder="ex: Tecnologia, Arte, Música, Esportes, Jogos"
-                      className="pl-10 border-purple-100 focus:border-primary rounded-xl"
+                      className="pl-10 border-border focus:border-primary rounded-xl"
                       {...field}
                     />
                   </div>
@@ -111,7 +113,7 @@ export default function MatchForm({ onSubmit, isLoading }: MatchFormProps) {
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
                     <Input
                       placeholder="Cidade ou país"
-                      className="pl-10 border-purple-100 focus:border-primary rounded-xl"
+                      className="pl-10 border-border focus:border-primary rounded-xl"
                       {...field}
                     />
                   </div>

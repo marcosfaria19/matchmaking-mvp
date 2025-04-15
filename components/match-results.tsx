@@ -21,9 +21,9 @@ export default function MatchResults({
   onReset,
 }: MatchResultsProps) {
   return (
-    <div className="p-6 md:p-8">
+    <div className="p-6 md:p-10">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-slate-800">Your Matches</h2>
+        <h2 className="text-xl font-semibold text-slate-800">Deu Match!</h2>
         <Button
           variant="ghost"
           size="sm"
@@ -31,14 +31,14 @@ export default function MatchResults({
           className="flex items-center"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back
+          Voltar
         </Button>
       </div>
 
       <div className="mb-6 p-4 bg-slate-50 rounded-lg">
         <p className="text-sm text-slate-600">
-          Based on your interest in{" "}
-          <span className="font-medium">{userData.interest}</span> and location{" "}
+          Baseado em seus interesses em{" "}
+          <span className="font-medium">{userData.interest}</span> e localização{" "}
           <span className="font-medium">{userData.location}</span>
         </p>
       </div>

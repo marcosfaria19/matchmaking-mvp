@@ -37,34 +37,40 @@ export default function MatchmakingSystem() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-      <AnimatePresence mode="wait">
-        {!matches ? (
-          <motion.div
-            key="form"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <MatchForm onSubmit={handleSubmit} isLoading={isLoading} />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="results"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <MatchResults
-              matches={matches}
-              userData={formData}
-              onReset={handleReset}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="relative">
+      {/* Decorative elements */}
+      <div className="absolute -top-12 -left-12 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
+      <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+
+      <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-border">
+        <AnimatePresence mode="wait">
+          {!matches ? (
+            <motion.div
+              key="form"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <MatchForm onSubmit={handleSubmit} isLoading={isLoading} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="results"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <MatchResults
+                matches={matches}
+                userData={formData}
+                onReset={handleReset}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
