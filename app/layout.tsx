@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Intelligent Matchmaking",
-  description: "Find your perfect match based on shared interests and location",
+  title: "Match Inteligente",
+  description: "Encontre seu match perfeito com nossa IA",
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import MatchmakingSystem from "@/components/matchmaking-system";
 import { Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
             interesses e localização
           </p>
         </header>
+
+        <MatchmakingSystem />
       </div>
     </main>
   );
